@@ -7,8 +7,8 @@ from time import sleep
 import undetected_chromedriver as uc
 
 
-email = "munnyvalasai5@gmail.com"
-password = "Manesh@97"
+email = "Your email"
+password = "Your Password"
 USER_ID = 32902079
 
 STARTING_AMOUNT = int(input("Enter Your trading AMount? "))
@@ -86,6 +86,10 @@ if user_id == USER_ID:
         print(seconds)
         if seconds == 0:
             print("Your trading start on this time", seconds)
+
+            # To break the loop here
+            if GET_PROFIT_AMOUNT == WANT_TO_PROFIT_AMOUNT:
+                break
 
             # First time trading start when there is no any profit
             if TRADING_FIRST_TIME_CHECK == 0:
@@ -175,10 +179,6 @@ if user_id == USER_ID:
 
                         print("Loss")
                         is_profit = False
-
-        # To break the loop here
-        if GET_PROFIT_AMOUNT == WANT_TO_PROFIT_AMOUNT:
-            break
 
 else:
     print("Not ID match!...")
